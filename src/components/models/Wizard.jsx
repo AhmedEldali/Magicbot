@@ -7,7 +7,7 @@ import { useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 
 const Wizard = React.memo(function Wizard(props) {
-  const { scene } = useGLTF("/models/dark_magician.glb");
+  const { scene } = useGLTF("/models/fully_rigged_witch.glb");
   const modelRef = useRef();
 
   useFrame((state) => {
@@ -19,7 +19,7 @@ const Wizard = React.memo(function Wizard(props) {
       {...props}
       dispose={null}
       ref={modelRef}
-      position={[0, -1, 0]}
+      position={[0, - 0.3, 0]}  // Adjusted to move the model up
       scale={[1.2, 1.2, 1.2]}
       rotation={[0, Math.PI / 4, 0]}
     >
@@ -29,4 +29,4 @@ const Wizard = React.memo(function Wizard(props) {
 });
 
 export default Wizard;
-useGLTF.preload("/models/dark_magician.glb");
+useGLTF.preload("/models/fully_rigged_witch.glb");
