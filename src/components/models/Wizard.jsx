@@ -19,8 +19,8 @@ const Wizard = React.memo(function Wizard(props) {
       {...props}
       dispose={null}
       ref={modelRef}
-      position={[0, -2, 0]}
-      scale={[1.5, 1.5, 1.5]}
+      position={[0, -1, 0]}
+      scale={[1.2, 1.2, 1.2]}
       rotation={[0, Math.PI / 4, 0]}
     >
       <primitive object={scene} />
