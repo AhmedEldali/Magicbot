@@ -29,4 +29,3 @@ const Wizard = React.memo(function Wizard(props) {
 });
 
 export default Wizard;
-useGLTF.preload("/models/fully_rigged_witch.glb");
