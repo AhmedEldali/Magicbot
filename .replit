@@ -9,7 +9,7 @@ run = ["sh", "-c", "npm run start"]
 build = ["sh", "-c", "npm run build"]
 
 [workflows]
-runButton = "Build and Start"
+runButton = "Dev"
 
 [[workflows.workflow]]
 name = "Build and Start"
@@ -23,6 +23,15 @@ args = "npm run build"
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "npm run start"
+
+[[workflows.workflow]]
+name = "Dev"
+author = 40785466
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npm run dev"
 
 [[ports]]
 localPort = 3000
