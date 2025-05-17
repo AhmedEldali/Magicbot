@@ -106,11 +106,11 @@ export default function MagicBotDashboard() {
         {Object.entries(data.kpis).map(([key, value], index) => (
           <motion.div
             key={key}
-            className="custom-bg p-6 rounded-lg"
+            className="shadow-glass p-6 rounded-lg backdrop-blur-sm"
             {...fadeIn}
             transition={{ delay: index * 0.1 }}
           >
-            <h3 className="text-foreground/60 capitalize">{key}</h3>
+            <h3 className="text-muted capitalize">{key}</h3>
             <p className="text-3xl font-bold text-accent">
               {key === 'revenue' ? `$${value.toLocaleString()}` : value}
               {key === 'engagement' || key === 'uptime' ? '%' : ''}
@@ -120,7 +120,7 @@ export default function MagicBotDashboard() {
       </div>
 
       <motion.div
-        className="custom-bg p-6 rounded-lg mb-8"
+        className="shadow-glass p-6 rounded-lg mb-8 backdrop-blur-sm"
         {...fadeIn}
       >
         <h2 className="text-2xl font-bold text-accent mb-4">Engagement Trends</h2>
@@ -139,7 +139,7 @@ export default function MagicBotDashboard() {
       </motion.div>
 
       <motion.div
-        className="custom-bg p-6 rounded-lg"
+        className="shadow-glass p-6 rounded-lg backdrop-blur-sm"
         {...fadeIn}
       >
         <h2 className="text-2xl font-bold text-accent mb-4">Client Activity</h2>
