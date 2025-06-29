@@ -7,7 +7,7 @@ import { useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 
 const Wizard = React.memo(function Wizard(props) {
-  const { scene } = useGLTF("/models/fully_rigged_witch.glb");
+  const { scene } = useGLTF("/models/wizard-transformed.glb");
   const modelRef = useRef();
 
   useFrame((state) => {
